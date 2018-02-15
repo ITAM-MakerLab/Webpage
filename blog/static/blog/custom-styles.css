@@ -8,7 +8,14 @@ html, body {
 }
 
 #main-jumbo {
+    padding: 0;
     min-height: 75vh;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.video-container{
+    width: 100%;
 }
 
 .align-all{
@@ -16,6 +23,7 @@ html, body {
     align-items: center;
 }
 #title-jumbo{
-    font-family: 'Ubuntu Mono', monospace;
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
     color: white;
 }

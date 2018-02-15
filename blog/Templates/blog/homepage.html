@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <title>MakerLab ITAM</title>
 
+    {% load static %}
 
     <!-- Bootstrap CSS, CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    {% load static %}
     <!-- Customized stylesheet -->
     <link rel="stylesheet" href="{% static "blog/custom-styles.css" %}">
+
     <!-- Fonts from: fonts.google.com -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
 
 </head>
 <body>
 
-<!-- Main jumbotron View -->
-<div class="jumbotron align-all " id="main-jumbo" style="background-image: url( {% static "blog/images/itam.jpg" %} )">
-    <h1 class="display-1" id="title-jumbo" > MakerLab </h1>
+<!-- Main jumbotron  -->
+<div id="main-jumbo" class="jumbotron align-all">
+    <h1 class="display-1" id="title-jumbo"> MakerLab </h1>
+    <video preload="preload" autoplay="autoplay" loop="loop" class="video-container"  >
+        <source src=" {% static "blog/images/videoCool.mp4" %}" >
+    </video>
 </div>
 
 <!-- sticky top navbar -->
@@ -37,6 +41,23 @@
           </li>
       </ul>
   </nav>
+
+<!-- Info container -->
+<div class="row">
+    <div class="col-md-8" style="background-color: teal">
+        axul
+    </div>
+    <div class="col-md-4">
+        no axul
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">Place s content here.</span>
+    </div>
+</footer>
 
 </body>
 </html>
