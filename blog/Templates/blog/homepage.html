@@ -14,21 +14,33 @@
     <!-- Fonts from: fonts.google.com -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+    <!-- MathJax -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
 </head>
 <body>
 
 <!-- Main jumbotron  -->
-<div id="main-jumbo" class="jumbotron align-all">
-    <h1 class="display-1" id="title-jumbo"> MakerLab </h1>
-    <video preload="preload" autoplay="autoplay" loop="loop" class="video-container"  >
-        <source src=" {% static "blog/images/videoCool.mp4" %}" >
+<div id="main-jumbo" class="jumbotron-fluid align-all embed-responsive">
+
+    <!--
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iDn1nosgQ5k?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1&amp;mute=1"  allow="autoplay; encrypted-media"  ></iframe>
+    -->
+
+    <video muted="muted" autoplay="autoplay" class="embed-responsive-item " loop="loop"  style="width: 100vw; height: auto;">
+        <source src="{% static "blog/images/videoCool.mp4" %}">
     </video>
+
+    <h1 class="display-1" id="title-jumbo"> MakerLab </h1>
+
 </div>
 
 <!-- sticky top navbar -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-      <a class="navbar-brand" href="https://www.google.com"> Home  </a>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top" >
+      <a class="navbar-brand" href="https://www.google.com"> Home
+          <img src="{%  static "blog/images/MAKER.png" %}" style="width: 25vw; height: auto">
+      </a>
       <ul class="navbar-nav">
           <li class="nav-item">
               <a class="nav-link"> Blog </a>
@@ -42,22 +54,26 @@
       </ul>
   </nav>
 
-<!-- Info container -->
-<div class="row">
-    <div class="col-md-8" style="background-color: teal">
-        axul
-    </div>
-    <div class="col-md-4">
-        no axul
-    </div>
-</div>
+<div class="row" >
+      <div class="col-sm-7 align-all" style="background-color: yellow; height: 50vh">
+          <img src="{% static "blog/images/MAKER.png" %}" style="width: 80%">
 
+      </div>
 
-<footer class="footer">
-    <div class="container">
-        <span class="text-muted">Place s content here.</span>
-    </div>
-</footer>
+      <!-- righthand white column -->
+      <div class="col-sm-5 " style="background-color: white;" >
+          <h2 class=" mt-5 float-center "> Descripción cool </h2>
+          <p class="brand-text-white" >
+              El MakerLab es una organización estudiantil dentro del Instituto Tecnológico Autónomo de México (ITAM).
+          </p>
+          <p class="brand-text-white" >
+              Existe como un espacio dedicado para todo aquel que quiera poner en marcha sus proyectos, experimentar nuevas tecnologías,
+              y para los curiosos ....
+              $$ \frac{1}{2} $$
+          </p>
+      </div>
+  </div>
+
 
 </body>
 </html>
