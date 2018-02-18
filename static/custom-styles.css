@@ -34,6 +34,10 @@ p{
     font-size: 24px;
 }
 
+.blog-list-item{
+    font-size: 25px;
+}
+
 .description-rows{
     height: 50vh;
 }

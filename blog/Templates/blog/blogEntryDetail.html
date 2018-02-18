@@ -1,0 +1,13 @@
+{% extends "templates/scaffold.html" %}
+
+{% block mainContent %}
+
+
+    <div class="container-fluid p-5">
+        <h3 class="display-3"> {{ selected_entry.tituloEntry }} </h3>
+
+        <p>  {{ selected_entry.contenidoEntry|safe }}</p>
+
+    </div>
+
+{%  endblock %}

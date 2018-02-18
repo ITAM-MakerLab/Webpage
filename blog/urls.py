@@ -15,9 +15,10 @@ Including another URLconf
 """
 
 from django.urls import path
-from . import  views
+from . import views
 
 urlpatterns = [
     path("", views.blogIndex, name="homepage"),
+    path('/<int:blogEntry_id>/', views.blogEntry, name='detail'),
 
 ]

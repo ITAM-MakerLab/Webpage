@@ -1,0 +1,48 @@
+{% extends "templates/scaffold.html" %}
+
+{% block mainContent %}
+
+    <div class="jumbotron">
+        <h1 class="display-2"> Bienvenido a blogs</h1>
+    </div>
+
+    <div class="container-fluid p-5">
+
+    <!-- Display for featured posts -->
+        <h2> Entradas destacadas </h2>
+        <div class="row">
+            <div class="col-md">
+                <div class="card md-4 box-shadow my-3">
+                    <img class="card-img-top" src="https://picsum.photos/5092/3395?image=1062" alt="Card image cap">
+                    <div class="card-body">
+                        <h4> Reparando una impresora 3D</h4>
+                        <p class="card-text"> Reparando Zortrax M200</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card md-4 box-shadow my-3">
+                    <img class="card-img-top" src="https://picsum.photos/5092/3395?image=1062" alt="Card image cap">
+                    <div class="card-body">
+                        <h4> Modificando CNC </h4>
+                        <p class="card-text"> maquina cool </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h3 class="display-4 m-4"> Aquí está una lista de los blogs más recientes </h3>
+
+        <ul class="list-group">
+            {% for blog in blogs_list %}
+                <li class="list-group-item blog-list-item">  <a href="/blog/{{ blog.id }}"> {{ blog }} </a> </li>
+            {% endfor %}
+        </ul>
+
+
+    </div>
+
+{%  endblock %}
