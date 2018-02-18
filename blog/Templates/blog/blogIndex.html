@@ -6,7 +6,7 @@
         <h1 class="display-2"> Bienvenido a blogs</h1>
     </div>
 
-    <div class="container-fluid p-5">
+    <div class="container-fluid p-5 mb-5">
 
     <!-- Display for featured posts -->
         <h2> Entradas destacadas </h2>
@@ -36,7 +36,7 @@
 
         <h3 class="display-4 m-4"> Aquí está una lista de los blogs más recientes </h3>
 
-        <ul class="list-group">
+        <ul class="list-group list-group-flush pb-3">
             {% for blog in blogs_list %}
                 <li class="list-group-item blog-list-item">  <a href="/blog/{{ blog.id }}"> {{ blog }} </a> </li>
             {% endfor %}

@@ -5,9 +5,20 @@
 
     <div class="container-fluid p-5">
         <h3 class="display-3"> {{ selected_entry.tituloEntry }} </h3>
+        <h3> Por {{ selected_entry.autorEntry }}</h3>
 
-        <p>  {{ selected_entry.contenidoEntry|safe }}</p>
+        <div class="container-fluid px-2 mt-3">
+            <p>  {{ selected_entry.contenidoEntry|safe }}</p>
+        </div>
 
+
+        <button class="btn btn-primary my-5" onclick="goBack()"> \( \leftarrow \) Regresar</button>
     </div>
+
+    <script>
+    function goBack() {
+    window.history.back();
+    }
+    </script>
 
 {%  endblock %}

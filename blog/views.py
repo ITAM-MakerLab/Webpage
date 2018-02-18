@@ -3,7 +3,7 @@ from .models import BlogEntry
 
 
 def blogIndex(request):
-    recent_blogs = BlogEntry.objects.order_by("entryDateTime")
+    recent_blogs = BlogEntry.objects.order_by("entryDateTime").reverse()
     blog_context = {"blogs_list": recent_blogs}
     return render(request, "blog/blogIndex.html", blog_context)
 
