@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MakerLab ITAM</title>
+
+    {% load static %}
+
+    <!-- Bootstrap CSS, CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- Customized stylesheet -->
+    <link rel="stylesheet" href="{% static "custom-styles.css" %}">
+
+    <!-- Fonts + material icons, from google  -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+</head>
+<body>
+
+{%  block scaffoldContent%}
+{% endblock %}
+
+
+<footer >
+    <div class="row">
+
+        <div class="col-md-6" style="background-color: green">
+            <div class="row p-5">
+                <div class="col-md-6">
+                    <p> Logo Hermoso</p>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li> Enlaces</li>
+                        <li> de</li>
+                        <li> inte</li>
+                        <li> res</li>
+                        <li> cool</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 p-0">
+            <div class="container-fluid py-4" style="background-color: seagreen">
+                <h4> Dirección <i class="material-icons">location_on</i> </h4>
+                <p> Rio Hondo #1. </p>
+                <p class="m-0"> Progreso Tizapán </p>
+            </div>
+            <div class="container-fluid m-0 py-4" style="background-color: greenyellow ">
+                <h4> Contacto </h4>
+                <p class="m-0"> Nuestras redes sociales, email
+                    teléfono del ITAM, shalalal, yes
+                </p>
+                <p class="m-0">
+                    pa llenar más espacio
+                </p>
+                <p class="m-0">
+                    Y pal deploying
+                </p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
