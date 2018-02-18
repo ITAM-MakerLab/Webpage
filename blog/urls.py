@@ -19,4 +19,7 @@ from . import  views
 
 urlpatterns = [
     path("", views.homepage, name="homepage"),
+    path("tutoriales", views.hola, name="tutoriales"),
+    path("blog", views.hola, name="blog"),
+    path("proyectos", views.hola, name="blog"),
 ]

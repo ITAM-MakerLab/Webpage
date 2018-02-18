@@ -1,6 +1,4 @@
-html, body {
-    height: 100%;
-}
+
 
 .fill {
     min-height: 100%;
@@ -8,7 +6,7 @@ html, body {
 }
 
 #main-jumbo {
-    height: 75vh;
+    height: 80vh;
     padding: 0;
     margin-bottom: 0;
     border-radius: 0;
@@ -30,4 +28,12 @@ html, body {
     0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616,
     0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
 
+}
+
+p{
+    font-size: 24px;
+}
+
+.description-rows{
+    height: 50vh;
 }
