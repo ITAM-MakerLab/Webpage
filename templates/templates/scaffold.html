@@ -4,24 +4,7 @@
 
     <div class="row" style="min-height: 85vh">
         <div class="col-md-2 bg-dark text-center navbar-dark pt-5">
-            <a class="navbar-brand" href="/"> MakerLab </a>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/"> Home <i class="material-icons">home</i>  </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/tutoriales"> Tutoriales <i class="material-icons ">lightbulb_outline</i> </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/blog"> Blog <i class="material-icons">book</i> </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/proyectos"> Proyectos <i class="material-icons">build</i> </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/otros"> Cosas cool <i class="material-icons">memory</i> </a>
-                </li>
-            </ul>
+            {% include "templates/navbar_link_list.html" %}
         </div>
         <div class="col-sm-10 p-0">
             {% block mainContent %}

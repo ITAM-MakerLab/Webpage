@@ -42,24 +42,7 @@
 
   <!-- Sticky sticky navbar -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-      <a class="navbar-brand" href="/"> MakerLab </a>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/"> Home <i class="material-icons">home</i>  </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/tutoriales"> Tutoriales <i class="material-icons ">lightbulb_outline</i> </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/blog"> Blog <i class="material-icons">book</i> </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/proyectos"> Proyectos <i class="material-icons">build</i> </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/otros"> Cosas cool <i class="material-icons">memory</i> </a>
-            </li>
-        </ul>
+      {% include "templates/navbar_link_list.html" %}
   </nav>
 
 <!-- First row: description -->
@@ -202,49 +185,7 @@
     </div>
 </div>
 
-<!--Footer -->
-<footer class="footer">
-    <div class="row">
-
-        <div class="col-md-6" style="background-color: green">
-            <div class="row p-5">
-                <div class="col-md-6">
-                    <p> Logo Hermoso</p>
-                </div>
-                <div class="col-md-6">
-                    <ul>
-                        <li> Enlaces</li>
-                        <li> de</li>
-                        <li> inte</li>
-                        <li> res</li>
-                        <li> cool</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 p-0">
-            <div class="container-fluid py-4" style="background-color: seagreen">
-                <h4> Dirección <i class="material-icons">location_on</i> </h4>
-                <p> Rio Hondo #1. </p>
-                <p class="m-0"> Progreso Tizapán </p>
-            </div>
-            <div class="container-fluid m-0 py-4" style="background-color: greenyellow ">
-                <h4> Contacto </h4>
-                <p class="m-0"> Nuestras redes sociales, email
-                    teléfono del ITAM, shalalal, yes
-                </p>
-                <p class="m-0">
-                    pa llenar más espacio
-                </p>
-                <p class="m-0">
-                    Y pal deploying
-                </p>
-            </div>
-        </div>
-
-    </div>
-</footer>
+{% include "templates/footer.html" %}
 
 </body>
 </html>
