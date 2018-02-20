@@ -9,6 +9,17 @@
     padding: 0;
     margin-bottom: 0;
     border-radius: 0;
+
+}
+
+.index-parallax_jumbo{
+    margin-bottom: 0;
+    border-radius: 0;
+
+    background: url(https://source.unsplash.com/1600x1050/?nature);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -40,4 +51,20 @@
 .footer-text{
     color: white;
     font-size: 14px;
+}
+
+.white-text{
+    color: white;
+}
+
+.bg-green1{
+    background-color: rgb(0,107,83) ;
+}
+
+.bg-green2{
+    background-color: rgb(0,164,109) ;
+}
+
+.bg-green3{
+    background-color: rgb(0,90,69) ;
 }

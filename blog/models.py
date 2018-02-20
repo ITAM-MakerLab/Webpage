@@ -10,3 +10,10 @@ class BlogEntry(models.Model):
 
     def __str__(self):
         return self.tituloEntry + " por " + self.autorEntry
+
+
+class FeaturedBlogEntry(models.Model):
+    entryId = models.IntegerField()
+    tituloShort = models.CharField(max_length=100)
+    contenidoShort = models.CharField(max_length=140)
+    featuredImage = models.ImageField(upload_to="static/images")

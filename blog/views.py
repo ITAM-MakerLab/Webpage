@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from .models import BlogEntry
+from .models import BlogEntry, FeaturedBlogEntry
 
 
 def blogIndex(request):
     recent_blogs = BlogEntry.objects.order_by("entryDateTime").reverse()
-    blog_context = {"blogs_list": recent_blogs}
+    features = FeaturedBlogEntry.objects.all()
+    blog_context = {"blogs_list": recent_blogs, "featured_entries": features}
     return render(request, "blog/blogIndex.html", blog_context)
 
 
