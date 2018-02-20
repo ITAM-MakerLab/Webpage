@@ -31,17 +31,18 @@
 
         </div>
 
+        {% if blogs_list %}
+            <h3 class="display-4 m-4"> Entradas Recientes</h3>
 
+            <ul class="list-group list-group-flush pb-3">
+                {% for blog in blogs_list %}
+                    <li class="list-group-item blog-list-item">  <a href="/blog/{{ blog.id }}"> {{ blog }} </a> </li>
+                {% endfor %}
+            </ul>
 
-        <h3 class="display-4 m-4"> Entradas Recientes</h3>
-
-        <ul class="list-group list-group-flush pb-3">
-
-            {% for blog in blogs_list %}
-                <li class="list-group-item blog-list-item">  <a href="/blog/{{ blog.id }}"> {{ blog }} </a> </li>
-            {% endfor %}
-
-        </ul>
+        {% else %}
+            <h3 class="display-4 m-4"> No encontramos ninguna entrada reciente. </h3>
+        {% endif %}
 
 
     </div>

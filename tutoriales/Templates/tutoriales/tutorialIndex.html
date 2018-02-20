@@ -9,39 +9,40 @@
     <div class="container-fluid p-5 mb-5">
 
     <!-- Display for featured posts -->
-        <h2> Tutoriales destacados </h2>
+        {% if features%}
+            <h2> Tutoriales destacados </h2>
+        {% endif %}
+
         <div class="row">
-            <div class="col-md">
-                <div class="card md-4 box-shadow my-3">
-                    <img class="card-img-top" src="https://picsum.photos/5092/3395?image=1062" alt="Card image cap">
-                    <div class="card-body">
-                        <h4> Ensamblando una ANET A8 </h4>
-                        <p class="card-text"> Troubleshooting </p>
+
+            {% for tutorial in features %}
+                <div class="col-md">
+
+                    <div class="card md-4 box-shadow my-3">
+                        <img class="card-img-top" src="{{ tutorial.featuredImage.url }}" >
+                        <div class="card-body">
+                            <h4> {{ tutorial.tituloShort }}</h4>
+                            <p class="card-text"> {{ tutorial.contenidoShort }}</p>
+                            <a href="/blog/{{ tutorial.tutorialId }}"> <p class="card-text"> Continuar leyendo </p> </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md">
-                <div class="card md-4 box-shadow my-3">
-                    <img class="card-img-top" src="https://picsum.photos/5092/3395?image=1062" alt="Card image cap">
-                    <div class="card-body">
-                        <h4> Modificando CNC </h4>
-                        <p class="card-text"> maquina cool </p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
 
         </div>
 
 
+        {% if tut_list %}
+            <h3 class="display-4 m-4"> Tutoriales Recientes</h3>
 
-        <h3 class="display-4 m-4"> Tutoriales Recientes</h3>
-
-        <ul class="list-group list-group-flush pb-3">
-            {% for blog in blogs_list %}
-                <li class="list-group-item blog-list-item">  <a href="/blog/{{ blog.id }}"> {{ blog }} </a> </li>
-            {% endfor %}
-        </ul>
-
+            <ul class="list-group list-group-flush pb-3">
+                {% for blog in blogs_list %}
+                    <li class="list-group-item blog-list-item">  <a href="/blog/{{ blog.id }}"> {{ blog }} </a> </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h3 class="display-4 m-4"> No encontramos nigún tutorial :( </h3>
+        {% endif %}
 
     </div>
 

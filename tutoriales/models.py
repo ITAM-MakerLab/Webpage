@@ -10,3 +10,10 @@ class Tutorial(models.Model):
 
     def __str__(self):
         return self.tituloTut + " por " + self.autorTut
+
+
+class FeaturedTutorial(models.Model):
+    tutorialId = models.IntegerField
+    tituloShort = models.CharField(max_length=100)
+    contenidoShort = models.CharField(max_length=140)
+    featuredImage = models.ImageField(upload_to="static/images")

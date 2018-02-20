@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Tutorial
+from .models import Tutorial, FeaturedTutorial
 
 
 def tutorialesIndex(request):
-    recent_blogs = Tutorial.objects.order_by("tutDateTime").reverse()
-    tut_context = {"tut_list": recent_blogs}
+    recent_tuts = Tutorial.objects.order_by("tutDateTime").reverse()
+    feauted_tuts = FeaturedTutorial.objects.all()
+    tut_context = {"tut_list": recent_tuts, "features": feauted_tuts}
     return render(request, "tutoriales/tutorialIndex.html", tut_context)
 
 
