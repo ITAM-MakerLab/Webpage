@@ -21,8 +21,8 @@
                         <img class="card-img-top" src="{{ project.fontImg.url }}" >
                         <div class="card-body">
                             <h4> {{ project.tituloP }}</h4>
-                            <p class="card-text"> {{ project.contentP }}</p>
-                            <a href="/blog/{{ project.id }}"> <p class="card-text"> Continuar leyendo </p> </a>
+                            <p class="card-text"> {{ project.contentP|safe }}</p>
+                            <a href="/proyectos/{{ project.id }}"> <p class="card-text"> Continuar leyendo </p> </a>
                         </div>
                     </div>
                 </div>
