@@ -19,6 +19,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("homepage.urls")),
-    path("blog", include("blog.urls")),
-    path("tutoriales", include("tutoriales.urls")),
+    path("blog/", include("blog.urls")),
+    path("tutoriales/", include("tutoriales.urls")),
+    path("proyectos/", include("proyectos.urls")),
+
+    # Todo: Create URLConfig in tutoriales, models, views etc...
 ]

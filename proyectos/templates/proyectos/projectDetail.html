@@ -1,0 +1,24 @@
+{% extends "templates/scaffold.html" %}
+
+{% block mainContent %}
+
+
+    <div class="container-fluid p-5">
+        <h3 class="display-3"> {{ project.tituloP }} </h3>
+        <h3> Por {{ project.autorP }}</h3>
+
+        <div class="container-fluid px-2 mt-3">
+            <p>  {{ project.contentP|safe }}</p>
+        </div>
+
+
+        <button class="btn btn-primary my-5" onclick="goBack()"> \( \leftarrow \) Regresar</button>
+    </div>
+
+    <script>
+    function goBack() {
+    window.history.back();
+    }
+    </script>
+
+{%  endblock %}

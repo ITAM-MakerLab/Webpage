@@ -1,0 +1,39 @@
+{% extends "templates/scaffold.html" %}
+
+{% block mainContent %}
+
+    <div class="jumbotron index-parallax_jumbo">
+        <h1 class="display-2"> Nuestros proyectos</h1>
+    </div>
+
+    <div class="container-fluid p-5 mb-5">
+
+    <!-- Display for featured posts -->
+        {% if recent_projects %}
+            <h2> Proyectos Recientes </h2>
+
+            <div class="row">
+
+            {% for project in recent_projects %}
+                <div class="col-md">
+
+                    <div class="card md-4 box-shadow my-3">
+                        <img class="card-img-top" src="{{ project.fontImg.url }}" >
+                        <div class="card-body">
+                            <h4> {{ project.tituloP }}</h4>
+                            <p class="card-text"> {{ project.contentP }}</p>
+                            <a href="/blog/{{ project.id }}"> <p class="card-text"> Continuar leyendo </p> </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+        {% else %}
+            <h2> No encontramos ningún proyecto </h2>
+        {% endif %}
+
+
+    </div>
+
+{%  endblock %}
